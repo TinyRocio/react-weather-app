@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import SearchEngine from "./SearchEngine"
+import CurrentDay from './CurrentDay';
+import WeeklyForecast from "./WeeklyForecast"
+import Footer from "./Footer"
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <div className="container">
+      <div className="react-weather-app">
+    <SearchEngine />
+    <CurrentDay />
+    <WeeklyForecast />
+      </div>
+    </div>
+    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
 );

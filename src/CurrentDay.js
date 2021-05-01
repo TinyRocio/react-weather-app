@@ -7,8 +7,10 @@ export default function CurrentDay() {
     date: "April,12,2021",
     day: "Wednesday 10:00",
     city: "New York",
+    temperature: "75",
+    feelsLike: "80",
+    humidity: "55",
     description: "Sunny",
-    temperature: "75"
   };
 
   return (
@@ -32,18 +34,24 @@ export default function CurrentDay() {
             <a href="/"> °F</a>|<a href="/">°C</a>
                 </span>
           </li>
-            <li className="description">{CurrentDayData.description}</li>
           </ul>
         </div>
       </div>
       <div className="row">
-        <div className="col-6">
+        <div className="col-5">
           <ReactAnimatedWeather
     icon="CLEAR_DAY"
     color="WHITE"
     size={80}
     animate={true}
   />
+        </div>
+        <div className="col-6">
+          <ul className="main-data">
+            <li className="description">{CurrentDayData.description}</li>
+            <li className="feelslike">Feels Like: {CurrentDayData.feelsLike}°</li>
+            <li className="humidity">Humidity: {CurrentDayData.humidity}%</li>
+          </ul>
         </div>
       </div>
     </div>

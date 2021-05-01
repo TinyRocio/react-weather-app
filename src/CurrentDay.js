@@ -38,13 +38,17 @@ export default function CurrentDay() {
         </div>
       </div>
       <div className="row">
-        <div className="col-5">
+        <div className="col-6">
+          <ul>
+            <li className="weatherIcon">
           <ReactAnimatedWeather
     icon="CLEAR_DAY"
     color="WHITE"
     size={80}
     animate={true}
-  />
+    />
+    </li>
+    </ul>
         </div>
         <div className="col-6">
           <ul className="main-data">
